@@ -13,34 +13,39 @@ let obj = new Child();
 
 
 class Person {  //Parent Class 
-    constructor() {
+    constructor(name) {
         this.species = "homo sapiens";
+        this.name = name;
     }
     eat() {
         console.log("eat");
     }
 
-    sleep() {
-        console.log("sleep");
-    }
-    work() {
-        console.log(" do nothing ");
-    }
+    // sleep() {
+    //     console.log("sleep");
+    // }
+    // work() {
+    //     console.log(" do nothing ");
+    // }
 }
 
 
 class Engineer extends Person{  //Child Class 
+    constructor(name) {
+        super(name); //to invoke parent class constructor 
+        
+    }
     work() {
         console.log("solve problems, build something ");
     }
 }
 
-class Doctor extends Person{
-    work() {
-        console.log("Treat Patients");
-    }
-}
+// class Doctor extends Person{
+//     work() {
+//         console.log("Treat Patients");
+//     }
+// }
 
 
 
-let akankshaobj = new Engineer();
+let engobj = new Engineer("akanksha" );
